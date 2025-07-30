@@ -1,1 +1,131 @@
-/* Your styles go here */
+/* Reset & basics */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: sans-serif;
+    padding: 10px;
+    background: #fff;
+    color: #333;
+  }
+  
+  header {
+    background: orange;
+    color: white;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 1.5em;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+    padding-left: 0;
+  }
+  
+  nav a {
+    text-decoration: none;
+    color: white;
+    background: #444;
+    padding: 5px;
+    display: block;
+    border-radius: 4px;
+  }
+  
+  main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+      "about"
+      "abilities"
+      "aside"
+      "gallery";
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .about {
+    grid-area: about;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 6px;
+  }
+  
+  .abilities {
+    grid-area: abilities;
+    background: #f0f0f0;
+    padding: 15px;
+    border-radius: 6px;
+  }
+  
+  .aside {
+    grid-area: aside;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 6px;
+    font-style: italic;
+  }
+  
+  .gallery {
+    grid-area: gallery;
+    padding: 15px;
+    text-align: center;
+  }
+  
+  .gallery img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 6px;
+  }
+  
+  footer {
+    margin-top: 30px;
+    background: #ddd;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+  }
+  
+  /* Tablet Styles */
+  @media (min-width: 600px) {
+    nav ul {
+      flex-direction: row;
+      justify-content: center;
+      gap: 15px;
+    }
+  
+    nav a {
+      padding: 8px 12px;
+    }
+  }
+  
+  /* Desktop Styles */
+  @media (min-width: 900px) {
+    h1 {
+      font-size: 2em;
+    }
+  
+    main {
+      grid-template-columns: 2fr 1fr;
+      grid-template-rows: auto auto;
+      grid-template-areas:
+        "about aside"
+        "abilities gallery";
+      gap: 30px;
+    }
+  
+    .gallery {
+      text-align: left;
+    }
+  }
+  
